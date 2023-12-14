@@ -1,0 +1,72 @@
+[
+    {
+        "_id": "657b0e115f88a4d04b9916c1",
+        "product": "product 1",
+        "quantity": 25,
+        "customer_name": "budi",
+        "customer_address": "jalan yang pernah kita lalui"
+    },
+    {
+        "_id": "657b0e115f88a4d04b9916c2",
+        "product": "product 2",
+        "quantity": 10,
+        "customer_name": "siti",
+        "customer_address": "lorong indah 5"
+    },
+    {
+        "_id": "657b0e115f88a4d04b9916c3",
+        "product": "product 3",
+        "quantity": 15,
+        "customer_name": "anwar",
+        "customer_address": "gang jaya 8"
+    },
+    {
+        "_id": "657b0e115f88a4d04b9916c4",
+        "product": "product 4",
+        "quantity": 30,
+        "customer_name": "lina",
+        "customer_address": "jalan ceria 12"
+    },
+    {
+        "_id": "657b0e115f88a4d04b9916c5",
+        "product": "product 5",
+        "quantity": 12,
+        "customer_name": "rudi",
+        "customer_address": "gang harmoni 3"
+    },
+    {
+        "_id": "657b0e115f88a4d04b9916c6",
+        "product": "product 6",
+        "quantity": 18,
+        "customer_name": "sara",
+        "customer_address": "jalan sejahtera 7"
+    },
+    {
+        "_id": "657b0e115f88a4d04b9916c7",
+        "product": "product 7",
+        "quantity": 22,
+        "customer_name": "bambang",
+        "customer_address": "lorong damai 2"
+    },
+    {
+        "_id": "657b0e115f88a4d04b9916c8",
+        "product": "product 8",
+        "quantity": 8,
+        "customer_name": "rita",
+        "customer_address": "gang makmur 6"
+    },
+    {
+        "_id": "657b0e115f88a4d04b9916c9",
+        "product": "product 9",
+        "quantity": 20,
+        "customer_name": "agus",
+        "customer_address": "jalan bahagia 11"
+    },
+    {
+        "_id": "657b0e115f88a4d04b9916ca",
+        "product": "product 10",
+        "quantity": 16,
+        "customer_name": "siska",
+        "customer_address": "lorong cerah 4"
+    }
+]

@@ -45,7 +45,7 @@ def create_order():
     return jsonify({"message": "Order created successfully", "order": new_order})
 
 # Update an order by ID
-@app.route('/orders/<string:order_id>', methods=['PUT'])
+@app.route('/orders/<string:order_id>', methods=['PATCH'])
 def update_order(order_id):
     data = request.json
     updated_order = {
