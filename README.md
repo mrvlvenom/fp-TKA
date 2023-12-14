@@ -1,141 +1,98 @@
 # 🔥 FINAL PROJECT (FP) TEKNOLOGI KOMPUTASI AWAN 🔥
 
-## A. Cakupan Capaian Pembelajaran Mata Kuliah (CPMK)
-1. Mampu memahami dan menerapkan berbagai servis pada layanan awan.
-2. Mampu merancang dan mengaplikasikan teknologi komputasi awan.
+# Final Project 
+### Teknologi Komputasi Awan
 
+**Kelas A**
 
-## B. Constraint Final Project
-1. FP ini dikerjakan secara berkelompok (mengikuti kelompok presentasi)
-2. Linkungan cloud yang digunakan (pilih salah satu)
-    - `Digital Ocean (Credit 200$)`
-        * Boleh memanfaatkan semua fitur yang ada
-        * Harga sesuai dengan yang disediakan Provider
-    - `Microsoft Azure (Credit 100$)`
-        * Boleh memanfaatkan semua fitur yang ada
-        * Harga sesuai dengan pricing calculator Azure
-    - `Local Vritual Machine (VirtualBox/Vagrant) sebagai alternatif simulasi cloud.`
-        * Apabila membuat lebih dari 1 VM, maka VM harus dibuat **minimal** dari 2 Komputer / Host yang berbeda
-        * Hanya boleh membuat VM dengan spesifikasi sebagai berikut
+**Kelompok 1**
+|Nama|NRP  |
+|--|--|
+|Bhisma Elki Pratama|5027221005|
+|M. Januar Eko Wicaksono|5027221006|
+|Jeany Aurelia|5027221008|
+|Siti Nur Ellyzah|5027221015|
 
-            | No | Tipe   | CPU   | Memory | Harga / bulan |
-            |----|--------|-------|--------|---------------|
-            | 1  | vm1    | 1vCPU | 512 MB | 4 US$         |
-            | 2  | vm2    | 1vCPU | 1 GB   | 6 US$         |
-            | 3  | vm3    | 1vCPU | 2 GB   | 12 US$        |
-            | 4  | vm4    | 2vCPU | 2 GB   | 18 US$        |
-            | 5  | vm5    | 2vCPU | 4 GB   | 24 US$        |
-            | 6  | vm6    | 4vCPU | 8 GB   | 48 US$        |
+## Permasalahan
+Anda adalah seorang lulusan Teknologi Informasi, sebagai ahli IT, salah satu kemampuan yang harus dimiliki adalah Kemampuan merancang, membangun, mengelola aplikasi berbasis komputer menggunakan layanan awan untuk memenuhi kebutuhan organisasi.(menurut kurikulum IT ITS 2023 😙)
 
+Pada suatu saat teman anda ingin mengajak anda memulai bisnis di bidang digital marketing, anda diberikan sebuah aplikasi berbasis API File: app.py dengan spesifikasi sebagai berikut.
 
-## C. Permasalahan
+Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutuhan aplikasi tersebut. Apabila dana maksimal yang diberikan adalah 1 juta rupiah per bulan (65 US$) konfigurasi cloud terbaik seperti apa yang bisa dibuat?
 
-Anda adalah seorang lulusan Teknologi Informasi, sebagai ahli IT, salah satu kemampuan yang harus dimiliki adalah **Keampuan merancang, membangun, mengelola aplikasi berbasis komputer menggunakan layanan awan untuk memenuhi kebutuhan organisasi.**(menurut kurikulum IT ITS 2023 😙) 
+## Rancangan Arsitektur dan Tabel Harga Spesifikasi VM
+- Berikut adalah rancangan arsitektur yang telah kami buat untuk final project kami
+![arsitektur]( )
+- Kami memilih untuk menggunakan Digital Ocean sebagai lingkungan cloud yang akan kami gunakan. Berikut adalah tabel harga spesifikasi VM yang kami buat <br>
+![tabel harga]( )
 
-Pada suatu saat teman anda ingin mengajak anda memulai bisnis di bidang digital marketing, anda diberikan sebuah aplikasi berbasis API File: [app.py](/app.py) dengan spesifikasi sebagai berikut
+## Langkah Implementasi dan Konfigurasi Teknologi
+1. Buat database dan copy connection string
+![e9bf51bc-fff5-416d-9208-c6f6ab0734e7](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/ce08c7bf-385d-449d-beb6-89bddde4566a)
 
-## Endpoints:
+2. Create new connection dengan string database yang sudah di-copy sebelumnya
+![0b04f257-0ef6-48e9-988b-1737c8475b16](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/2fd86bc3-2ba8-4b79-bd81-10819d69533b)
 
-1. **Get All Orders**
-   - **Endpoint:** `GET /orders`
-   - **Description:** Retrieve a list of all orders.
-   - **Response:**
-     ```json
-     {
-       "orders": [
-         {"_id": "order_id_1", "product": "Product1", "quantity": 5, "customer_name": "John Doe", "customer_address": "123 Main St"},
-         {"_id": "order_id_2", "product": "Product2", "quantity": 3, "customer_name": "Jane Smith", "customer_address": "456 Oak St"},
-         // ...
-       ]
-     }
-     ```
+3. Buat database sesuai dengan variabel yang sudah dibuat di dalam app.py
+![Screenshot 2023-12-13 133954](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/91484af1-616b-4e9b-a9f5-4c975d87620d)
 
-2. **Get a Specific Order by ID**
-   - **Endpoint:** `GET /orders/<order_id>`
-   - **Description:** Retrieve details of a specific order by its ID.
-   - **Response:**
-     ```json
-     {
-       "order": {"_id": "order_id", "product": "ProductX", "quantity": 8, "customer_name": "Alice Johnson", "customer_address": "789 Elm St"}
-     }
-     ```
+4. Create database baru dengan collection order, add data (import json file)lalu pilih file orders.json yang berisi data-data yang akan dimasukan ke database<br>
+![268eff90-912c-475b-b165-7919dc1d8d74](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/606b56f9-1c17-4553-870c-dd613223427d)
 
-3. **Create a New Order**
-   - **Endpoint:** `POST /orders`
-   - **Description:** Create a new order.
-   - **Request:**
-     ```json
-     {
-       "product": "ProductY",
-       "quantity": 2,
-       "customer_name": "Bob Anderson",
-       "customer_address": "101 Pine St"
-     }
-     ```
-   - **Response:**
-     ```json
-     {
-       "message": "Order created successfully",
-       "order": {"_id": "new_order_id", "product": "ProductY", "quantity": 2, "customer_name": "Bob Anderson", "customer_address": "101 Pine St"}
-     }
-     ```
+5. Run app.py hingga muncul url-nya
+![73269c30-c764-4838-867b-f74991970945](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/2a9dda00-5c63-4cee-8631-c075db58b8bd)
 
-4. **Update an Order by ID**
-   - **Endpoint:** `PUT /orders/<order_id>`
-   - **Description:** Update an existing order by its ID.
-   - **Request:**
-     ```json
-     {
-       "quantity": 10,
-       "customer_address": "Updated Address"
-     }
-     ```
-   - **Response:**
-     ```json
-     {
-       "message": "Order updated successfully",
-       "order": {"_id": "order_id", "product": "Updated Product", "quantity": 10, "customer_name": "Existing Name", "customer_address": "Updated Address"}
-     }
-     ```
+6. Untuk mengecek database-nya bisa menggunakan postman, request ke url/orders. Jika statusnya sudah 200 ok, maka database sudah bisa berjalan dengan normal
+![73269c30-c764-4838-867b-f74991970945](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/2a9dda00-5c63-4cee-8631-c075db58b8bd)
 
-5. **Delete an Order by ID**
-   - **Endpoint:** `DELETE /orders/<order_id>`
-   - **Description:** Delete an existing order by its ID.
-   - **Response:**
-     ```json
-     {
-       "message": "Order deleted successfully"
-     }
-     ```
+7. Deploy VM untuk worker dengan installasi requirement yang diperlukan di worker
+![8d40b7fd-b13c-4b93-828f-97572effd529](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/5f72b077-ca0e-4ed1-9985-bf020010b5ae)
 
-    ### MongoDB Configuration:
+8. Jika tidak ada error, maka worker sudah berjalan
 
-    - **Database:** `orders_db`
-    - **Connection URI:** `mongodb://localhost:27017/orders_db`
+## Hasil Pengujian Setiap Endpoint
+1. Get All Orders
+![get all orders](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/127307991/cf0d700b-751e-4112-b7e3-129605201325)
 
----
+2. Get a Specific Orders by ID
+![get order by id](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/127307991/baf487db-6cf9-40e4-a8a6-1d87e0737e6f)
 
-Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutuhan aplikasi tersebut. Apabila dana maksimal yang diberikan adalah **1 juta rupiah per bulan (65 US$)**
-konfigurasi cloud terbaik seperti apa yang bisa dibuat?
+3. Create a New Order
+![create](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/127307991/04ad7a67-fe00-4fee-b4d6-febd2375fcb9)
 
-## D. Output Final Project dan Penilaian
-1. Buatlah rancangan arsitektur cloud nya beserta harga yang diperlukan (20%) **(dipresentasikan saat diskusi minggu 15)**
-2. Lakukan instalasi / implementasi rancangan cloud dan aplikasi, pastikan setiap endpoint aplikasi dapat berjalan (30%)
-3. Lakukan load testing menggunakan Locust ([Locustfile](/locustfile.py)) untuk endpoint Get Order dan Create new Order dengan parameter pengujian sebagai berikut (30%)
-    1. Locust harus dijalankan dengan Komputer / Host yang berbeda dari Aplikasi
-    2. Berapakah **jumlah Request per seconds (RPS)** maksimum yang dapat ditangani oleh server dengan durasi waktu load testing 60 detik? (tingkat failure harus 0%)
-    3. Berapa **jumlah peak concurrency** maksimum yang dapat ditangani oleh server dengan **spawn rate 25** dan durasi waktu load testing 60 detik? (tingkat failure harus 0%)
-    4. Berapa **jumlah peak concurrency** maksimum yang dapat ditangani oleh server dengan **spawn rate 50** dan durasi waktu load testing 60 detik? (tingkat failure harus %)
-    5. Berapa **jumlah peak concurrency** maksimum yang dapat ditangani oleh server dengan **spawn rate 10**0 dan durasi waktu load testing 60 detik? (tingkat failure harus 0%)
-4. Buatlah dokumentasi laporan dalam github (markdown) dengan konten sebagai berikut: (20%)
-    1. Introduction, jelaskan permasalahan (bisa mereferensi ke soal ini)
-    2. Gambar desain rancangan arsitektur komputasi awan (dapat menggunakan https://app.diagrams.net/) dan Tabel harga spesifikasi dan Harga VM
-    3. Tuliskan langkah langkah implementasi dan konfigurasi teknologinya (Load balancing, instalasi app.py, instalasi mongodb, dll) disertai screenshot lebih bagus 
-    4. Hasil Pengujian endpoint setiap API (dapat menggunakan Postman)
-    5. Hasil Pengujian dan analisis Loadtesting menggunakan Locust 
-    6. Kesimpulan dan saran.
+4. Update an Order by ID
+![update order](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/127307991/12aec701-9dff-41f6-9061-c8d4b5d4b991)
 
-## X. Tips and trick
-1. Implementasikan dengan spesifikasi paling kecil terlebih dahulu, coba cari kofigurasi optimal untuk memaksimalkan kerja processor dan memory, kemudian lakukan scale out untuk mendapatkan hasil Load testing terbaik.
-2. Manfaatkan semua yang sudah dipelajari dalam kelas dan praktikum komputasi awan (Load balancing, provisioning, dll)
-3. Good Luck :fist:
+5. Delete an Order by ID
+![delete](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/127307991/a49b1ad8-2a4d-4d1e-92b4-928b081c4f3b)
+
+## Hasil Pengujian dan Analisis Loadtesting Locust
+1. Endpoint Get Order
+- RPS Maksimum (load testing 60 detik)
+- Peak Concurrency Maksimum (spawn rate 25, load testing 60 detik)
+
+- Peak Concurrency Maksimum (spawn rate 50, load testing 60 detik)
+
+- Peak Concurrency Maksimum (spawn rate 100, load testing 60 detik)
+![0ff1b562-1038-4685-8aec-cf8ab958f8bb](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/592ebaa7-5087-453d-b39a-3dc2f339bf6b)
+
+2. Endpoint Create New Order
+- RPS Maksimum (load testing 60 detik)
+- Peak Concurrency Maksimum (spawn rate 25, load testing 60 detik)
+- Device Ilhan
+![post 25 ilhan](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/c272d432-1029-402c-9aa5-e4ca05a8ad56)
+- Peak Concurrency Maksimum (spawn rate 50, load testing 60 detik)
+- Device Ilhan
+![post 50 ilhan](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/6f6390c3-1977-4c2d-9376-5b385afc27a7)
+-Device Jacinta
+![post 50](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/aca89bf5-e4fe-4802-b6e4-856e5af0cade)
+- Peak Concurrency Maksimum (spawn rate 100, load testing 60 detik)
+- Device Ilhan
+![post 100 ilhan](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/5e2d98d1-3104-4785-8327-9d46f8179eff)
+- Device Jacinta
+![post 100](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/4eadba1c-b2c1-4377-83fd-f0c1bf1fbdd6)
+
+## Kesimpulan dan Saran
+- Setelah melakukan pengecekan harga, harga untuk digital ocean lebih murah
+- Setelah percobaan yang kami lakukan berulang kali, jumlah load balancer sebaiknya sama dengan jumlah worker karena ketika kami mencoba menggunakan 1 load balancer dan 3 worker terjadi down pada ketiga worker tersebut
+![a78daaeb-889e-458f-aa5b-e7457f011a95](https://github.com/JacintaSyilloam/fp-cloud-computing/assets/115382618/c11984c3-57b1-4c47-94e4-a31e02741f25)
