@@ -96,6 +96,6 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 
 ## Kesimpulan dan Saran
 - Setelah melakukan pengecekan harga antara Azure dan Digital Ocean, ternyata harga untuk digital ocean lebih murah dibandingkan azure.
-- Setelah melakukan percobaan, testing pada locust. Ketika spawn rate lebih tinggi, persentase failures nya itu lebih kecil dibandingkan dengan spawn rate yang lebih rendah. Seperti pada grafik diatas.
+- Setelah melakukan percobaan, testing pada locust. Ketika spawn rate lebih rendah, persentase failures nya itu lebih kecil dibandingkan dengan spawn rate yang lebih tinggi. Seperti pada grafik diatas.
 - Setelah percobaan yang kami lakukan berulang kali, jumlah load balancer sebaiknya sama dengan jumlah worker karena ketika kami mencoba menggunakan 1 load balancer dan 3 worker terjadi down pada ketiga worker tersebut.
 ![a78daaeb-889e-458f-aa5b-e7457f011a95](./img/simpul.png)
