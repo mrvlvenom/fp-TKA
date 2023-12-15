@@ -34,7 +34,7 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 ![0b04f257-0ef6-48e9-988b-1737c8475b16](./img/newconnect.jpg)
 
 3. Buat database sesuai dengan variabel yang sudah dibuat di dalam app.py
-![Screenshot 2023-12-13 133954]()
+![Screenshot 2023-12-13 133954](./img/code.jpg)
 
 4. Create database baru dengan collection order, add data (import json file)lalu pilih file orders.json yang berisi data-data yang akan dimasukan ke database<br>
 ![268eff90-912c-475b-b165-7919dc1d8d74](./img/inputdata.jpg)
