@@ -10,8 +10,8 @@
 |--|--|
 |Bhisma Elki Pratama|5027221005|
 |M. Januar Eko Wicaksono|5027221006|
-|Jeany Aurelia|5027221008|
-|Siti Nur Ellyzah|5027221015|
+|Jeany Aurellia Putri Dewati|5027221008|
+|Siti Nur Ellyzah|5027221014|
 
 ## Permasalahan
 Anda adalah seorang lulusan Teknologi Informasi, sebagai ahli IT, salah satu kemampuan yang harus dimiliki adalah Kemampuan merancang, membangun, mengelola aplikasi berbasis komputer menggunakan layanan awan untuk memenuhi kebutuhan organisasi.(menurut kurikulum IT ITS 2023 😙)
