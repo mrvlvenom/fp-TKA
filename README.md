@@ -74,7 +74,10 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 - Peak Concurrency Maksimum (spawn rate 50, load testing 60 detik)
 
 - Peak Concurrency Maksimum (spawn rate 100, load testing 60 detik)
-![0ff1b562-1038-4685-8aec-cf8ab958f8bb](./img/getorder.jpg)
+![0ff1b562-1038-4685-8aec-cf8ab958f8bb](./img/1.jpg)
+![0ff1b562-1038-4685-8aec-cf8ab958f8bb](./img/11.jpg)
+![0ff1b562-1038-4685-8aec-cf8ab958f8bb](./img/2.jpg)
+![0ff1b562-1038-4685-8aec-cf8ab958f8bb](./img/22.jpg)
 
 2. Endpoint Create New Order
 - RPS Maksimum (load testing 60 detik)
