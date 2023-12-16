@@ -49,13 +49,13 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 ![8d40b7fd-b13c-4b93-828f-97572effd529](./img/deploy.png)
 
 8. Install Nginx pada VM load Balancer, kemudian konfigurasikan dengan IP Address yang dimiliki oleh kedua worker, didalam konfigurasi nginx. Seperti dibawah ini:
-![Konfigurasi Nginx](./img/konfigurasi_nginx.png)
+![Konfigurasi Nginx](./img/konfigurasi_nginx.jpg)
 
 9. Kemudian jalankan nginx, dengan cara dibawah ini:
-![Run Nginx](./img/run_nginx.png)
+![Run Nginx](./img/run_nginx.jpg)
 
 10. Setelah itu, IP Address dari loud balancer yang ada di digital ocean diuji coba, jika muncul database seperti dibawah ini maka sudah berhasil:
-![Database](./img/database.png)
+![Database](./img/database.jpg)
 
 11. Jika tidak ada error, maka worker sudah berjalan
 
