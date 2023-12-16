@@ -48,7 +48,16 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 7. Deploy VM untuk worker dengan installasi requirement yang diperlukan di worker
 ![8d40b7fd-b13c-4b93-828f-97572effd529](./img/deploy.png)
 
-8. Jika tidak ada error, maka worker sudah berjalan
+8. Install Nginx pada VM load Balancer, kemudian konfigurasikan dengan IP Address yang dimiliki oleh kedua worker, didalam konfigurasi nginx. Seperti dibawah ini:
+![Konfigurasi Nginx](./img/konfigurasi_nginx.png)
+
+9. Kemudian jalankan nginx, dengan cara dibawah ini:
+![Run Nginx](./img/run_nginx.png)
+
+10. Setelah itu, IP Address dari loud balancer yang ada di digital ocean diuji coba, jika muncul database seperti dibawah ini maka sudah berhasil:
+![Database](./img/database.png)
+
+11. Jika tidak ada error, maka worker sudah berjalan
 
 ## Hasil Pengujian Setiap Endpoint
 1. Get All Orders
@@ -67,38 +76,19 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 ![delete](./img/deleteid.jpg)
 
 ## Hasil Pengujian dan Analisis Loadtesting Locust
-1. Endpoint Get Order
+1. Endpoint Get Order pada Load Balancing yang menajalankan 2 worker pada 1 device
 - RPS Maksimum (load testing 60 detik)
 - Peak Concurrency Maksimum (spawn rate 25, load testing 60 detik)
 
 - Peak Concurrency Maksimum (spawn rate 50, load testing 60 detik)
 
 - Peak Concurrency Maksimum (spawn rate 100, load testing 60 detik)
-![0ff1b562-1038-4685-8aec-cf8ab958f8bb](./img/1.jpg)
-![0ff1b562-1038-4685-8aec-cf8ab958f8bb](./img/11.jpg)
-![0ff1b562-1038-4685-8aec-cf8ab958f8bb](./img/2.jpg)
-![0ff1b562-1038-4685-8aec-cf8ab958f8bb](./img/22.jpg)
+![Result-charts](./img/result.jpg)
+![Results](./img/result_1.jpg)
 
-2. Endpoint Create New Order
-- RPS Maksimum (load testing 60 detik)
-- Peak Concurrency Maksimum (spawn rate 25, load testing 60 detik)
-- worker 1
-![post 25 worker1](./img/neworder.jpg)
-- worker 2
-![post 25 worker2](./img/neworder2.jpg)
-- Peak Concurrency Maksimum (spawn rate 50, load testing 60 detik)
-- worker 1
-![post 50 worker1](./img/neworder.jpg)
-- worker 2
-![post 50 worker2](./img/neworder2.jpg)
-- Peak Concurrency Maksimum (spawn rate 100, load testing 60 detik)
-- worker 1
-![post 100 worker1](./img/neworder.jpg)
-- worker 2
-![post 100 worker2](./img/neworder2.jpg)
 
 ## Kesimpulan dan Saran
 - Setelah melakukan pengecekan harga antara Azure dan Digital Ocean, ternyata harga untuk digital ocean lebih murah dibandingkan azure.
-- Setelah melakukan percobaan, testing pada locust. Ketika spawn rate lebih rendah, persentase failures nya itu lebih kecil dibandingkan dengan spawn rate yang lebih tinggi. Seperti pada grafik diatas.
+- Setelah melakukan percobaan, testing pada locust. Ketika spawn rate lebih rendah, persentase failures nya itu lebih kecil dibandingkan dengan spawn rate yang lebih tinggi  hingga 0% untuk persentasi failurse nya. Seperti pada grafik diatas.
 - Setelah percobaan yang kami lakukan berulang kali, jumlah load balancer sebaiknya sama dengan jumlah worker karena ketika kami mencoba menggunakan 1 load balancer dan 3 worker terjadi down pada ketiga worker tersebut.
 ![a78daaeb-889e-458f-aa5b-e7457f011a95](./img/simpul.png)
