@@ -76,7 +76,7 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 ![delete](./img/deleteid.jpg)
 
 ## Hasil Pengujian dan Analisis Loadtesting Locust
-1. Endpoint Get Order pada Load Balancing yang menajalankan 1 worker nginx sebagai load balancing pada 1 device
+1. Endpoint Get Order pada Load Balancing yang menajalankan 1 worker nginx sebagai load balancing yang membagi 2 worker pada 1 device
 - RPS Maksimum (load testing 60 detik)
 - Peak Concurrency Maksimum (spawn rate 25, load testing 60 detik)
 
